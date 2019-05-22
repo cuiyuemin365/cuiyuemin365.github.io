@@ -2,30 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/asdfas/index.html</loc>
+    <loc>http://yoursite.com/kafka%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E8%A7%A3%E6%9E%90/index.html</loc>
     
-    <lastmod>2019-05-22T10:50:48.558Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/05/22/asdfas/</loc>
-    
-    <lastmod>2019-05-22T10:45:19.206Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/05/22/1/</loc>
-    
-    <lastmod>2019-05-22T10:44:25.434Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/05/22/hello-world/</loc>
-    
-    <lastmod>2019-05-22T09:36:47.921Z</lastmod>
+    <lastmod>2019-05-22T10:56:35.074Z</lastmod>
     
   </url>
   
