@@ -79,13 +79,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="cuiyuemin365-blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="软件版本jdk-8u181-linux-x64.tar.gzzookeeper-3.4.14.tar.gzkafka_2.11-2.0.0.tgz 关闭防火墙启动： systemctl start firewalld关闭： systemctl stop firewalld查看状态： systemctl status firewalld开机禁用  ： systemctl disable firewa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建kafka集群">
+<meta property="og:url" content="http://yoursite.com/2019/05/23/搭建kafka集群/index.html">
 <meta property="og:site_name" content="cuiyuemin365-blog">
+<meta property="og:description" content="软件版本jdk-8u181-linux-x64.tar.gzzookeeper-3.4.14.tar.gzkafka_2.11-2.0.0.tgz 关闭防火墙启动： systemctl start firewalld关闭： systemctl stop firewalld查看状态： systemctl status firewalld开机禁用  ： systemctl disable firewa">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/05/23/搭建kafka集群/2019-05-23%2011:01:41.png">
+<meta property="og:updated_time" content="2019-05-23T03:01:58.946Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="cuiyuemin365-blog">
+<meta name="twitter:title" content="搭建kafka集群">
+<meta name="twitter:description" content="软件版本jdk-8u181-linux-x64.tar.gzzookeeper-3.4.14.tar.gzkafka_2.11-2.0.0.tgz 关闭防火墙启动： systemctl start firewalld关闭： systemctl stop firewalld查看状态： systemctl status firewalld开机禁用  ： systemctl disable firewa">
+<meta name="twitter:image" content="http://yoursite.com/2019/05/23/搭建kafka集群/2019-05-23%2011:01:41.png">
 
 
 
@@ -115,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/23/搭建kafka集群/">
 
 
 
 
 
-  <title>cuiyuemin365-blog</title>
+  <title>搭建kafka集群 | cuiyuemin365-blog</title>
   
 
 
@@ -140,8 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -224,9 +229,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -256,9 +261,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/23/搭建kafka集群/" itemprop="url">搭建kafka集群</a></h1>
+          <h1 class="post-title" itemprop="name headline">搭建kafka集群</h1>
         
 
         <div class="post-meta">
@@ -308,9 +311,7 @@
       
 
       
-        
-          
-            <h1 id="软件版本"><a href="#软件版本" class="headerlink" title="软件版本"></a>软件版本</h1><p>jdk-8u181-linux-x64.tar.gz<br>zookeeper-3.4.14.tar.gz<br>kafka_2.11-2.0.0.tgz</p>
+        <h1 id="软件版本"><a href="#软件版本" class="headerlink" title="软件版本"></a>软件版本</h1><p>jdk-8u181-linux-x64.tar.gz<br>zookeeper-3.4.14.tar.gz<br>kafka_2.11-2.0.0.tgz</p>
 <h2 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h2><p>启动： systemctl start firewalld<br>关闭： systemctl stop firewalld<br>查看状态： systemctl status firewalld<br>开机禁用  ： systemctl disable firewalld<br>开机启用  ： systemctl enable firewalld</p>
 <h1 id="安装配置jdk"><a href="#安装配置jdk" class="headerlink" title="安装配置jdk"></a>安装配置jdk</h1><h2 id="解压安装"><a href="#解压安装" class="headerlink" title="解压安装"></a>解压安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">su -</span><br><span class="line">cp /mnt/hgfs/share/jdk-8u181-linux-x64.tar.gz /opt/</span><br><span class="line">cd /opt/</span><br><span class="line">tar -zxvf jdk-8u181-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
 <h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><p>cat /etc/profile<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/opt/jdk1.8.0_181</span><br><span class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre</span><br><span class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</span><br></pre></td></tr></table></figure></p>
@@ -328,8 +329,6 @@
 <h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kafka-topics.sh --zookeeper  localhost:2181/kafka_2.11-2.0.0 --describe --topic topic-create</span><br></pre></td></tr></table></figure>
 <p><img src="/2019/05/23/搭建kafka集群/2019-05-23%2011:01:41.png" alt="2019-05-23 11:01:41"></p>
 
-          
-        
       
     </div>
     
@@ -346,12 +345,12 @@
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -361,10 +360,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -372,6 +372,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -392,8 +396,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -435,6 +448,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#软件版本"><span class="nav-number">1.</span> <span class="nav-text">软件版本</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关闭防火墙"><span class="nav-number">1.1.</span> <span class="nav-text">关闭防火墙</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装配置jdk"><span class="nav-number">2.</span> <span class="nav-text">安装配置jdk</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#解压安装"><span class="nav-number">2.1.</span> <span class="nav-text">解压安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置环境变量"><span class="nav-number">2.2.</span> <span class="nav-text">配置环境变量</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装配置zookeeper"><span class="nav-number">3.</span> <span class="nav-text">安装配置zookeeper</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#解压安装-1"><span class="nav-number">3.1.</span> <span class="nav-text">解压安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改环境变量"><span class="nav-number">3.2.</span> <span class="nav-text">修改环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置日志格式"><span class="nav-number">3.3.</span> <span class="nav-text">设置日志格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置文件修改"><span class="nav-number">3.4.</span> <span class="nav-text">配置文件修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动zookeeper"><span class="nav-number">3.5.</span> <span class="nav-text">启动zookeeper</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装配置kafka"><span class="nav-number">4.</span> <span class="nav-text">安装配置kafka</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#解压安装-2"><span class="nav-number">4.1.</span> <span class="nav-text">解压安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建目录"><span class="nav-number">4.2.</span> <span class="nav-text">创建目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#server配置"><span class="nav-number">4.3.</span> <span class="nav-text">server配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动kafka"><span class="nav-number">4.4.</span> <span class="nav-text">启动kafka</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建topic测试"><span class="nav-number">4.5.</span> <span class="nav-text">创建topic测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#测试"><span class="nav-number">5.</span> <span class="nav-text">测试</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -568,6 +597,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
